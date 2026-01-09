@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudOps Innovative Academy | Master Azure DevOps</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <!-- Navigation (Fixed via CSS Media Queries) -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-cloud-check" style="font-size: 2rem;"></i>
+                Cloud<span>Ops</span>
+            </a>
+
+            <button class="menu-toggle" aria-label="Toggle navigation"><i class="ph ph-list"></i></button>
+
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-actions">
+                <a href="contact.html" class="btn">Get Started</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Controlled by CSS/JS) -->
+        <div class="nav-links-mobile">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="btn">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg-shape shape-1"></div>
+        <div class="hero-bg-shape shape-2"></div>
+
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div
+                        style="display: inline-block; background: rgba(215, 38, 132, 0.1); color: var(--primary); padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; margin-bottom: 1.5rem; border: 1px solid rgba(215, 38, 132, 0.2);">
+                        <i class="ph-fill ph-trophy" style="margin-right: 5px;"></i> #1 Rated Azure DevOps Training
+                    </div>
+                    <h1>Master Azure <span class="text-gradient">DevOps</span> <br><span
+                            id="hero-headline-dynamic">Launch Your Career</span></h1>
+                    <p id="hero-subtext">Join the elite league of Cloud Engineers. Our practical, hands-on training is
+                        designed to take
+                        you from beginner to pro in just 8 weeks. No fluff, just code.</p>
+
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="contact.html" class="btn">Start Learning <i class="ph-bold ph-arrow-right"></i></a>
+                        <a href="#demo" class="btn-outline">View Syllabus</a>
+                    </div>
+                    <div style="margin-top: 3rem; display: flex; gap: 3rem;">
+                        <div>
+                            <div style="font-size: 2rem; font-weight: 800; color: var(--text-main);">94%</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">Hired</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2rem; font-weight: 800; color: var(--text-main);">4.9</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">Rating</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" style="position: relative;">
+                    <!-- Code Editor UI Simulation -->
+                    <div id="hero-code-card" class="hero-code-card">
+                        <div style="background: #2D2D2D; padding: 10px 15px; display: flex; gap: 8px;">
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background: #FF5F56;"></div>
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background: #FFBD2E;"></div>
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background: #27C93F;"></div>
+                            <div class="code-filename"
+                                style="margin-left: auto; color: #888; font-size: 0.8rem; font-family: monospace;">
+                                ci-cd-flow</div>
+                        </div>
+                        <div class="code-content"
+                            style="padding: 20px; height: 260px; display: flex; flex-direction: column; justify-content: center;">
+                            <!-- Pipeline Visual -->
+                            <div class="pipeline-container">
+                                <div class="pipeline-node active"><i class="ph-bold ph-code"></i></div>
+                                <div class="pipeline-connector"></div>
+                                <div class="pipeline-node"><i class="ph-bold ph-test-tube"></i></div>
+                                <div class="pipeline-connector"></div>
+                                <div class="pipeline-node"><i class="ph-bold ph-rocket-launch"></i></div>
+                            </div>
+                            <div
+                                style="text-align: center; margin-top: 2rem; color: var(--primary); font-family: monospace;">
+                                <span style="color: #666;">Status:</span> Building...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Detailed Features -->
+    <section class="features bg-surface">
+        <div class="container">
+            <div class="section-header">
+                <h2>Advance Your Career with Expert Training</h2>
+                <p style="text-align:left;">At CloudOps Innovative Institute, we specialise in industry-ready Azure
+                    DevOps training designed to transform learners into confident Cloud & DevOps professionals. Our
+                    training bridges the gap between theoretical knowledge and real-world implementation, ensuring you
+                    are job-ready from day one.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- New: Real-Time Industry Experience -->
+                <div class="glass-card">
+                    <div
+                        style="width: 60px; height: 60px; background: rgba(215, 38, 132, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 2rem; margin-bottom: 1.5rem;">
+                        <i class="ph-duotone ph-buildings"></i>
+                    </div>
+                    <h3>Real-Time Industry Experience</h3>
+                    <p>Learn directly from trainers with hands-on experience in enterprise Azure environments, real
+                        production pipelines, and cloud automation.</p>
+                </div>
+
+                <!-- Kept: 100% Hands-on Labs -->
+                <div class="glass-card">
+                    <div
+                        style="width: 60px; height: 60px; background: rgba(70, 34, 102, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: var(--secondary); font-size: 2rem; margin-bottom: 1.5rem;">
+                        <i class="ph-duotone ph-code"></i>
+                    </div>
+                    <h3>100% Hands-on Labs</h3>
+                    <p>No powerpoints. You will provision real infrastructure, write actual pipelines, and debug
+                        production issues in real-time.</p>
+                </div>
+
+                <!-- Kept: Career Support -->
+                <div class="glass-card">
+                    <div
+                        style="width: 60px; height: 60px; background: rgba(255, 209, 102, 0.2); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #F59E0B; font-size: 2rem; margin-bottom: 1.5rem;">
+                        <i class="ph-duotone ph-briefcase"></i>
+                    </div>
+                    <h3>Career Support</h3>
+                    <p>From resume reviewing to mock interviews, we support you until you land your dream offer. Our
+                        network is vast.</p>
+                </div>
+
+                <!-- New: End-to-End Azure DevOps Coverage -->
+                <div class="glass-card">
+                    <div
+                        style="width: 60px; height: 60px; background: rgba(46, 196, 182, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #2EC4B6; font-size: 2rem; margin-bottom: 1.5rem;">
+                        <i class="ph-duotone ph-cloud-check"></i>
+                    </div>
+                    <h3>End-to-End Azure DevOps Coverage</h3>
+                    <p>From source control to CI/CD, Infrastructure as Code, monitoring, and security — we cover the
+                        complete DevOps lifecycle on Azure.</p>
+                </div>
+
+                <!-- New: Hands-On Labs & Live Projects -->
+                <div class="glass-card">
+                    <div
+                        style="width: 60px; height: 60px; background: rgba(128, 90, 213, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #805AD5; font-size: 2rem; margin-bottom: 1.5rem;">
+                        <i class="ph-duotone ph-laptop"></i>
+                    </div>
+                    <h3>Hands-On Labs & Live Projects</h3>
+                    <p>Work on real-time scenarios, build pipelines, deploy applications, manage infrastructure, and
+                        solve practical challenges.</p>
+                </div>
+
+                <!-- New: Job-Oriented Curriculum -->
+                <div class="glass-card">
+                    <div
+                        style="width: 60px; height: 60px; background: rgba(255, 99, 71, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #FF6347; font-size: 2rem; margin-bottom: 1.5rem;">
+                        <i class="ph-duotone ph-graduation-cap"></i>
+                    </div>
+                    <h3>Job-Oriented Curriculum</h3>
+                    <p>Our syllabus is aligned with current industry requirements and Microsoft Azure DevOps best
+                        practices, helping you crack interviews with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Syllabus / Curriculum -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Program <span class="text-gradient">Curriculum</span></h2>
+                <p>An 8-week intensive journey from basics to mastery.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <details open>
+                    <summary>Week 1-2: Foundations of Cloud & DevOps</summary>
+                    <p>
+                        • Intro to Cloud Computing (Azure/AWS)<br>
+                        • Linux Essentials for DevOps<br>
+                        • Git & Version Control Mastery<br>
+                        • <strong>Project:</strong> Hosting a static website on Azure Storage
+                    </p>
+                </details>
+                <details>
+                    <summary>Week 3-4: CI/CD Pipelines with Azure DevOps</summary>
+                    <p>
+                        • Azure Repos & Branching Strategies<br>
+                        • Writing YAML Pipelines (Build & Release)<br>
+                        • Integrating Unit Tests & Code Quality Checks<br>
+                        • <strong>Project:</strong> Automated Build Pipeline for a Node.js App
+                    </p>
+                </details>
+                <details>
+                    <summary>Week 5: Containerization (Docker)</summary>
+                    <p>
+                        • Docker Fundamentals (Images, Containers, Registry)<br>
+                        • Dockerfile Best Practices<br>
+                        • Azure Container Registry (ACR)<br>
+                        • <strong>Project:</strong> Containerizing a Microservice Application
+                    </p>
+                </details>
+                <details>
+                    <summary>Week 6: Infrastructure as Code (Terraform/Bicep)</summary>
+                    <p>
+                        • Principles of IaC<br>
+                        • Provisioning Azure Resources with Terraform<br>
+                        • State Management & Modules<br>
+                        • <strong>Project:</strong> Deploying full infra stack with one command
+                    </p>
+                </details>
+                <details>
+                    <summary>Week 7: Kubernetes & Orchestration</summary>
+                    <p>
+                        • Kubernetes Architecture (Pods, Services, Ingress)<br>
+                        • Azure Kubernetes Service (AKS)<br>
+                        • Helm Charts<br>
+                        • <strong>Project:</strong> Deploying the Microservice to AKS
+                    </p>
+                </details>
+                <details>
+                    <summary>Week 8: Monitoring & Capstone</summary>
+                    <p>
+                        • Azure Monitor & Application Insights<br>
+                        • Logging & Alerting<br>
+                        • <strong>Final Capstone:</strong> End-to-End DevOps Implementation for an E-commerce Platform
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Global CTA -->
+    <section>
+        <div class="container">
+            <div class="glass-card"
+                style="text-align: center; border: 2px solid var(--primary); padding: 5rem 2rem; background: radial-gradient(circle at center, #FFF5F9 0%, #FFFFFF 70%);">
+                <h2 style="margin-bottom: 1rem;">Ready to upgrade your career?</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.2rem;">Slots are filling up fast for the next batch. Don't
+                    miss out.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://wa.me/447733707316" class="btn"
+                        style="background: #25D366; display: flex; gap: 0.5rem;"><i class="ph-fill ph-whatsapp-logo"
+                            style="font-size: 1.25rem;"></i> WhatsApp Us</a>
+                    <a href="contact.html" class="btn" style="display: flex; gap: 0.5rem;"><i
+                            class="ph-bold ph-calendar-check" style="font-size: 1.25rem;"></i> Book a Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="ph-fill ph-cloud-check" style="font-size: 2rem; color: var(--secondary);"></i>
+                        Cloud<span>Ops</span>
+                    </a>
+                    <p style="margin-top: 1.5rem;">Empowering the next generation of Cloud Engineers with precision,
+                        passion, and purpose.</p>
+
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="reviews.html">Careers</a></li>
+                            <li><a href="reviews.html">Success Stories</a></li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="contact.html">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:gadenethra24@gmail.com">gadenethra24@gmail.com</a></li>
+                        <li><a href="#">+44 7733 707316</a></li>
+                        <li>Walton-On-Thames, Surrey, UK</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; <span id="year"></span> CloudOps Innovative Academy. All rights reserved.</div>
+                <div style="display: flex; gap: 1.5rem;">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | CloudOps Innovative Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: white;
+            color: var(--text-main);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 2000;
+            border-left: 4px solid var(--primary);
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .rating-stars {
+            display: flex;
+            gap: 0.25rem;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+
+        .rating-stars input {
+            display: none;
+        }
+
+        .rating-stars label {
+            font-size: 1.5rem;
+            color: #ddd;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .rating-stars input:checked~label,
+        .rating-stars label:hover,
+        .rating-stars label:hover~label {
+            color: #FFD166;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-cloud-check" style="font-size: 2rem;"></i>
+                Cloud<span>Ops</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation"><i class="ph ph-list"></i></button>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="reviews.html" class="active">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn">Get Started</a>
+            </div>
+        </div>
+        <div class="nav-links-mobile">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="btn">Get Started</a>
+        </div>
+    </nav>
+
+    <div style="background: var(--bg-surface); padding-top: 10rem; padding-bottom: 5rem; text-align: center;">
+        <div class="container">
+            <h1 style="margin-bottom: 1rem;">Student <span class="text-gradient">Testimonials</span></h1>
+            <p style="max-width: 600px; margin: 0 auto;">Don't just take our word for it. See how CloudOps has
+                transformed careers.</p>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section>
+        <div class="container">
+            <div class="reviews-grid-masonry">
+
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-profile">
+                            <div class="avatar-circle"
+                                style="background: rgba(255, 209, 102, 0.2); color: #eebb00; border-color: rgba(255, 209, 102, 0.4);">
+                                CN</div>
+                            <div>
+                                <h4 style="font-size: 1rem; margin-bottom: 0;">Chaitanya Naini</h4>
+                                <small style="color: var(--primary); font-weight: 600;">Azure DevOps Engineer</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 1rem; font-size: 0.9rem; color: #FFD166; display: flex;">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0;">"The training was
+                        hands-on, and the projects gave me real confidence to apply for Azure DevOps roles."</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-profile">
+                            <div class="avatar-circle"
+                                style="background: rgba(239, 71, 111, 0.2); color: #EF476F; border-color: rgba(239, 71, 111, 0.4);">
+                                SD</div>
+                            <div>
+                                <h4 style="font-size: 1rem; margin-bottom: 0;">Sanjana Dasari</h4>
+                                <small style="color: var(--primary); font-weight: 600;">Azure DevOps Engineer</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 1rem; font-size: 0.9rem; color: #FFD166; display: flex;">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0;">"Excellent trainers
+                        with real-world experience. The course structure is very clear and industry-focused."</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-profile">
+                            <div class="avatar-circle"
+                                style="background: rgba(6, 214, 160, 0.2); color: #06D6A0; border-color: rgba(6, 214, 160, 0.4);">
+                                SN</div>
+                            <div>
+                                <h4 style="font-size: 1rem; margin-bottom: 0;">Sreeja Nasani</h4>
+                                <small style="color: var(--primary); font-weight: 600;">Azure DevOps Engineer</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 1rem; font-size: 0.9rem; color: #FFD166; display: flex;">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0;">"Excellent trainers
+                        with real-world experience. The course structure is very clear and industry-focused."</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Grid + Form -->
+    <section class="reviews-section bg-surface">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Community Feedback</h2>
+            <div class="reviews-layout-wrapper">
+
+                <!-- Review Form Sticky Side -->
+                <div class="review-form-container">
+                    <div class="glass-card">
+                        <h3 style="margin-bottom: 1.5rem;">Share Your Experience</h3>
+                        <form id="reviewForm">
+                            <input type="hidden" id="editReviewId">
+                            <div class="form-group">
+                                <label for="reviewName">Your Name</label>
+                                <input type="text" id="reviewName" placeholder="e.g. John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Rating</label>
+                                <div class="rating-stars" id="ratingStars">
+                                    <input type="radio" id="star5" name="rating" value="5"><label for="star5"
+                                        title="5 stars"><i class="ph-fill ph-star"></i></label>
+                                    <input type="radio" id="star4" name="rating" value="4"><label for="star4"
+                                        title="4 stars"><i class="ph-fill ph-star"></i></label>
+                                    <input type="radio" id="star3" name="rating" value="3" checked><label for="star3"
+                                        title="3 stars"><i class="ph-fill ph-star"></i></label>
+                                    <input type="radio" id="star2" name="rating" value="2"><label for="star2"
+                                        title="2 stars"><i class="ph-fill ph-star"></i></label>
+                                    <input type="radio" id="star1" name="rating" value="1"><label for="star1"
+                                        title="1 star"><i class="ph-fill ph-star"></i></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reviewText">Comment</label>
+                                <textarea id="reviewText" rows="4" placeholder="How was your experience?" required
+                                    style="resize: vertical;"></textarea>
+                            </div>
+                            <button type="submit" class="btn" style="width: 100%;" id="submitBtn">Submit Review</button>
+                            <button type="button" class="btn-outline"
+                                style="width: 100%; margin-top: 0.5rem; display: none; padding: 0.8rem; border-radius: 100px; cursor: pointer;"
+                                id="cancelEditBtn">Cancel Edit</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Masonry Reviews Display -->
+                <div class="reviews-content-container">
+                    <div id="reviewSummary" class="review-summary-card">
+                        <!-- Summary injected via JS -->
+                    </div>
+
+                    <div class="reviews-grid-masonry" id="reviewsContainer">
+                        <!-- Reviews appended here -->
+                    </div>
+
+                    <!-- Pagination Controls -->
+                    <div id="paginationControls" class="pagination-controls">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="ph-fill ph-cloud-check" style="font-size: 2rem;"></i>
+                        Cloud<span>Ops</span>
+                    </a>
+                    <p style="margin-top: 1.5rem;">Empowering the next generation of Cloud Engineers with precision,
+                        passion, and purpose.</p>
+
+                </div>
+                <!-- ... Same footer as others ... -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="reviews.html">Careers</a></li>
+                            <li><a href="reviews.html">Success Stories</a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="contact.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:gadenethra24@gmail.com">gadenethra24@gmail.com</a></li>
+                        <li><a href="#">+44 7733 707316</a></li>
+                        <li>Walton-On-Thames, Surrey, UK</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; <span id="year"></span> CloudOps Innovative Academy. All rights reserved.</div>
+                <div style="display: flex; gap: 1.5rem;">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast">
+        <i class="ph-fill ph-check-circle" style="color: var(--primary); font-size: 1.5rem;"></i>
+        <span id="toastMessage">Action successful</span>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3 style="margin-bottom: 1rem;">Delete Review?</h3>
+            <p style="margin-bottom: 2rem;">Are you sure you want to delete this review? This action cannot be undone.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+                <button id="cancelDelete" class="btn-outline"
+                    style="border-radius: 8px; padding: 0.8rem 1.5rem;">Cancel</button>
+                <button id="confirmDelete" class="btn"
+                    style="border-radius: 8px; padding: 0.8rem 1.5rem; background: #EF476F;">Delete</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // General Logic handled by script.js
+
+            // Toast Logic
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            function showToast(message) {
+                toastMessage.textContent = message;
+                toast.classList.add('show');
+                setTimeout(() => { toast.classList.remove('show'); }, 3000);
+            }
+
+            // Reviews Logic
+            const reviewForm = document.getElementById('reviewForm');
+            const reviewsContainer = document.getElementById('reviewsContainer');
+            const reviewSummary = document.getElementById('reviewSummary');
+            const submitBtn = document.getElementById('submitBtn');
+            const cancelEditBtn = document.getElementById('cancelEditBtn');
+            const editReviewIdInput = document.getElementById('editReviewId');
+            const paginationControls = document.getElementById('paginationControls');
+
+            // Modal Logic
+            const deleteModal = document.getElementById('deleteModal');
+            const cancelDeleteBtn = document.getElementById('cancelDelete');
+            const confirmDeleteBtn = document.getElementById('confirmDelete');
+            let reviewToDeleteId = null;
+
+            // Pagination State
+            let currentPage = 1;
+            const itemsPerPageDesktop = 5;
+            const itemsPerPageMobile = 3;
+
+            function getItemsPerPage() {
+                return window.innerWidth <= 768 ? itemsPerPageMobile : itemsPerPageDesktop;
+            }
+
+            function updateSummary(reviews) {
+                if (!reviewSummary) return;
+                if (reviews.length === 0) {
+                    reviewSummary.textContent = "No reviews yet.";
+                    return;
+                }
+                const avg = reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length;
+                const rounded = Math.round(avg);
+                let starHTML = '';
+                for (let i = 1; i <= 5; i++) {
+                    starHTML += i <= rounded ? '<i class="ph-fill ph-star" style="color: #FFD166;"></i>' : '<i class="ph-fill ph-star" style="color: #eee;"></i>';
+                }
+                reviewSummary.innerHTML = `
+                    <div style="text-align: left;">
+                        <div style="font-size: 3rem; font-weight: 800; line-height: 1; color: var(--text-main);">${avg.toFixed(1)}</div>
+                    </div>
+                     <div style="text-align: left;">
+                        <div style="font-size: 1.2rem; display: flex; gap: 2px; margin-bottom: 0.2rem;">${starHTML}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">Course Rating</div>
+                    </div>
+                `;
+            }
+
+            window.editReview = function (id) {
+                const reviews = JSON.parse(localStorage.getItem('cloudOpsReviews') || '[]');
+                const review = reviews.find(r => r.id === id);
+                if (!review) return;
+
+                document.getElementById('reviewName').value = review.name;
+                document.getElementById('reviewText').value = review.comment;
+                document.querySelector(`input[name="rating"][value="${review.rating}"]`).checked = true;
+                editReviewIdInput.value = review.id;
+                submitBtn.textContent = 'Update Review';
+                cancelEditBtn.style.display = 'block';
+                reviewForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            };
+
+            window.requestDelete = function (id) {
+                reviewToDeleteId = id;
+                deleteModal.classList.add('active');
+            };
+
+            cancelDeleteBtn.addEventListener('click', () => {
+                deleteModal.classList.remove('active');
+                reviewToDeleteId = null;
+            });
+
+            confirmDeleteBtn.addEventListener('click', () => {
+                if (reviewToDeleteId) {
+                    let reviews = JSON.parse(localStorage.getItem('cloudOpsReviews') || '[]');
+                    reviews = reviews.filter(r => r.id !== reviewToDeleteId);
+                    localStorage.setItem('cloudOpsReviews', JSON.stringify(reviews));
+                    showToast('Review deleted successfully');
+                    deleteModal.classList.remove('active');
+                    reviewToDeleteId = null;
+                    // Reset to page 1 to avoid empty pages
+                    currentPage = 1;
+                    loadReviews();
+                }
+            });
+
+            cancelEditBtn.addEventListener('click', function () { resetForm(); });
+            function resetForm() {
+                reviewForm.reset();
+                document.getElementById('star3').checked = true;
+                editReviewIdInput.value = '';
+                submitBtn.textContent = 'Submit Review';
+                cancelEditBtn.style.display = 'none';
+            }
+
+            window.toggleSeeMore = function (btn) {
+                const textPara = btn.previousElementSibling;
+                if (textPara.classList.contains('truncated')) {
+                    textPara.classList.remove('truncated');
+                    textPara.classList.add('expanded');
+                    btn.textContent = 'See Less';
+                } else {
+                    textPara.classList.add('truncated');
+                    textPara.classList.remove('expanded');
+                    btn.textContent = 'See More';
+                }
+            };
+
+            function loadReviews() {
+                const reviews = JSON.parse(localStorage.getItem('cloudOpsReviews') || '[]');
+                reviewsContainer.innerHTML = '';
+                paginationControls.innerHTML = '';
+
+                if (reviews.length === 0) {
+                    reviewsContainer.innerHTML = `
+                        <div style="text-align: center; color: var(--text-secondary); padding: 4rem; grid-column: 1/-1;">
+                            <i class="ph-duotone ph-pencil-simple-slash" style="font-size: 4rem; opacity: 0.5; margin-bottom: 1rem;"></i>
+                            <p>No reviews yet. Be the first!</p>
+                        </div>
+                    `;
+                    updateSummary(reviews);
+                    return;
+                }
+
+                // Pagination Logic
+                const itemsPerPage = getItemsPerPage();
+                const totalPages = Math.ceil(reviews.length / itemsPerPage);
+
+                // Ensure current page is valid
+                if (currentPage > totalPages) currentPage = totalPages;
+                if (currentPage < 1) currentPage = 1;
+
+                const start = (currentPage - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+                const paginatedReviews = reviews.slice(start, end);
+
+                paginatedReviews.forEach(review => {
+                    const card = document.createElement('div');
+                    card.className = 'review-card';
+                    let starHTML = '';
+                    for (let i = 1; i <= 5; i++) {
+                        starHTML += i <= review.rating ? '<i class="ph-fill ph-star" style="color: #FFD166;"></i>' : '<i class="ph-fill ph-star" style="color: #eee;"></i>';
+                    }
+                    const date = new Date(review.timestamp).toLocaleDateString();
+                    const initials = review.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+                    const colors = ['#FFD166', '#EF476F', '#06D6A0', '#118AB2'];
+                    const color = colors[review.name.length % colors.length];
+
+                    // Text Truncation Logic
+                    const maxChars = 150;
+                    let commentHTML = '';
+                    if (review.comment.length > maxChars) {
+                        commentHTML = `
+                            <p class="review-text truncated" style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0.5rem;">"${review.comment}"</p>
+                            <button class="see-more-btn" onclick="toggleSeeMore(this)">See More</button>
+                        `;
+                    } else {
+                        commentHTML = `<p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0;">"${review.comment}"</p>`;
+                    }
+
+                    card.innerHTML = `
+                        <div class="review-header">
+                            <div class="reviewer-profile">
+                                <div class="avatar-circle" style="background: ${color}20; color: ${color}; border-color: ${color}40;">${initials}</div>
+                                <div>
+                                    <h4 style="font-size: 1rem; margin-bottom: 0;">${review.name}</h4>
+                                    <small style="color: var(--text-light);">${date}</small>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <button onclick="editReview(${review.id})" class="action-btn" title="Edit"><i class="ph-bold ph-pencil-simple"></i></button>
+                                <button onclick="requestDelete(${review.id})" class="action-btn delete" title="Delete"><i class="ph-bold ph-trash"></i></button>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 1rem; font-size: 0.9rem; color: #FFD166; display: flex;">${starHTML}</div>
+                        ${commentHTML}
+                    `;
+                    reviewsContainer.appendChild(card);
+                });
+
+                // Render Pagination Controls
+                if (totalPages > 1) {
+                    if (currentPage > 1) {
+                        const prevBtn = document.createElement('button');
+                        prevBtn.className = 'btn-outline';
+                        prevBtn.style.padding = '0.5rem 1rem';
+                        prevBtn.style.borderRadius = '50px';
+                        prevBtn.style.cursor = 'pointer';
+                        prevBtn.innerHTML = '<i class="ph-bold ph-caret-left"></i> Prev';
+                        prevBtn.onclick = () => { currentPage--; loadReviews(); reviewsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+                        paginationControls.appendChild(prevBtn);
+                    }
+
+                    const pageInfo = document.createElement('span');
+                    pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+                    pageInfo.style.alignSelf = 'center';
+                    pageInfo.style.fontWeight = '600';
+                    pageInfo.style.color = 'var(--text-secondary)';
+                    paginationControls.appendChild(pageInfo);
+
+                    if (currentPage < totalPages) {
+                        const nextBtn = document.createElement('button');
+                        nextBtn.className = 'btn-outline';
+                        nextBtn.style.padding = '0.5rem 1rem';
+                        nextBtn.style.borderRadius = '50px';
+                        nextBtn.style.cursor = 'pointer';
+                        nextBtn.innerHTML = 'Next <i class="ph-bold ph-caret-right"></i>';
+                        nextBtn.onclick = () => { currentPage++; loadReviews(); reviewsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+                        paginationControls.appendChild(nextBtn);
+                    }
+                }
+
+                updateSummary(reviews);
+            }
+
+            // Handle Resize
+            window.addEventListener('resize', () => {
+                loadReviews();
+            });
+
+            reviewForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const name = document.getElementById('reviewName').value.trim();
+                const rating = parseInt(document.querySelector('input[name="rating"]:checked').value);
+                const comment = document.getElementById('reviewText').value.trim();
+                const id = editReviewIdInput.value ? parseInt(editReviewIdInput.value) : Date.now();
+                if (!name || !comment) return;
+                let reviews = JSON.parse(localStorage.getItem('cloudOpsReviews') || '[]');
+                if (editReviewIdInput.value) {
+                    const index = reviews.findIndex(r => r.id === id);
+                    if (index !== -1) { reviews[index] = { ...reviews[index], name, rating, comment }; showToast('Review updated successfully'); }
+                } else {
+                    reviews.unshift({ id, name, rating, comment, timestamp: Date.now() });
+                    showToast('Review submitted successfully');
+                }
+                localStorage.setItem('cloudOpsReviews', JSON.stringify(reviews));
+                resetForm();
+                loadReviews();
+            });
+            loadReviews();
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

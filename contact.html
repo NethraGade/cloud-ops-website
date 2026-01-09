@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | CloudOps Innovative Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        /* Details and Inline Message Styles already in style.css or here */
+        details {
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        details summary {
+            padding: 1.5rem;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        details[open] summary {
+            background: var(--bg-surface);
+            color: var(--primary);
+        }
+
+        details p {
+            margin: 0;
+            padding: 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .inline-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .inline-message.success {
+            display: block;
+            background: #E6FFFA;
+            color: #2EC4B6;
+            border: 1px solid #2EC4B6;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-cloud-check" style="font-size: 2rem;"></i>
+                Cloud<span>Ops</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation"><i class="ph ph-list"></i></button>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn">Get Started</a>
+            </div>
+        </div>
+        <div class="nav-links-mobile">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="btn">Get Started</a>
+        </div>
+    </nav>
+
+    <header style="background: var(--bg-surface); padding-top: 10rem; padding-bottom: 5rem; text-align: center;">
+        <div class="container">
+            <h1 style="margin-bottom: 1.5rem;">Get in <span class="text-gradient">Touch</span></h1>
+            <p style="max-width: 600px; margin: 0 auto;">We're here to answer your questions about our curriculum,
+                schedule, and career support. Our admission team typically responds within 2 hours.</p>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="features-grid" style="gap: 4rem;">
+                <!-- Contact Info -->
+                <div>
+                    <div class="glass-card"
+                        style="height: 100%; border-top: 4px solid var(--primary); display: flex; flex-direction: column;">
+                        <h2 style="margin-bottom: 2rem; font-size: 1.5rem;">Admissions Office</h2>
+
+                        <div style="margin-bottom: 2rem;">
+                            <h4
+                                style="color: var(--secondary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.8rem;">
+                                <div
+                                    style="width: 36px; height: 36px; background: var(--bg-surface); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                                    <i class="ph-bold ph-phone"></i>
+                                </div>
+                                Phone
+                            </h4>
+                            <p style="color: var(--text-main); font-size: 1.1rem; padding-left: 3.5rem;">+44 7733 707316
+                            </p>
+                            <p
+                                style="color: var(--text-secondary); font-size: 0.9rem; padding-left: 3.5rem; margin-top: 5px;">
+                                Mon-Fri, 9am - 6pm GMT</p>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                            <h4
+                                style="color: var(--secondary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.8rem;">
+                                <div
+                                    style="width: 36px; height: 36px; background: var(--bg-surface); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                                    <i class="ph-bold ph-envelope"></i>
+                                </div>
+                                Email
+                            </h4>
+                            <p style="padding-left: 3.5rem;"><a href="mailto:gadenethra24@gmail.com"
+                                    style="color: var(--text-main); font-size: 1.1rem; text-decoration: underline; text-decoration-color: var(--primary);">gadenethra24@gmail.com</a>
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: auto;">
+                            <h4
+                                style="color: var(--secondary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.8rem;">
+                                <div
+                                    style="width: 36px; height: 36px; background: var(--bg-surface); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                                    <i class="ph-bold ph-map-pin"></i>
+                                </div>
+                                Headquarters
+                            </h4>
+                            <p style="color: var(--text-main); font-size: 1.1rem; padding-left: 3.5rem;">
+                                Walton-On-Thames,
+                                Surrey, UK</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <div class="glass-card">
+                        <h2 style="margin-bottom: 1.5rem;">Send Message</h2>
+                        <form id="contactForm" action="https://formspree.io/f/mdaaneqb" method="POST">
+                            <div class="features-grid"
+                                style="grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label for="phone">Phone (Optional)</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+44...">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="interest">I am interested in...</label>
+                                <select id="interest" name="interest"
+                                    style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,0,0,0.1); border-radius: var(--radius-sm); font-family: inherit;">
+                                    <option>Live Cohort Training</option>
+                                    <option>Self-Paced Course</option>
+                                    <option>Corporate Training</option>
+                                    <option>General Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="How can we help you?"
+                                    required style="resize: vertical;"></textarea>
+                            </div>
+                            <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                            <div id="formMessage" class="inline-message">
+                                Thank you! We have received your message and will get back to you shortly.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-surface">
+        <div class="container" style="max-width: 900px;">
+            <div class="section-header">
+                <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
+            </div>
+
+            <div>
+                <details>
+                    <summary>What is the duration of the course? <i class="ph-bold ph-caret-down"></i></summary>
+                    <p>Our CloudOps Master Program is an 8-week intensive course. Live classes are held on weekends
+                        (Sat/Sun) for 4 hours each, with additional lab sessions on Wednesday evenings. You should
+                        expect to dedicate ~10-15 hours per week including homework.</p>
+                </details>
+
+                <details>
+                    <summary>Do I need prior experience? <i class="ph-bold ph-caret-down"></i></summary>
+                    <p>No prior professional experience is required, but basic computer literacy is essential. We start
+                        from the absolute basics of Linux and Cloud. If you know how to open a terminal, you are ready
+                        to start.</p>
+                </details>
+
+                <details>
+                    <summary>Is certification included? <i class="ph-bold ph-caret-down"></i></summary>
+                    <p>We prepare you for the Microsoft AZ-400 (Designing and Implementing Microsoft DevOps Solutions)
+                        certification. While the exam fee is paid to Microsoft directly, our curriculum covers 100% of
+                        the exam topics.</p>
+                </details>
+
+                <details>
+                    <summary>What if I miss a live class? <i class="ph-bold ph-caret-down"></i></summary>
+                    <p>All live sessions are recorded and sent to your student email address within 2 hours.</p>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Cloud<span>Ops</span></a>
+                    <p style="margin-top: 1.5rem;">Empowering the next generation of Cloud Engineers with precision,
+                        passion, and purpose.</p>
+
+                </div>
+                <!-- ... Same Footer Columns ... -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="reviews.html">Careers</a></li>
+                            <li><a href="reviews.html">Success Stories</a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="contact.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:gadenethra24@gmail.com">gadenethra24@gmail.com</a></li>
+                        <li><a href="#">+44 7733 707316</a></li>
+                        <li>Walton-On-Thames, Surrey, UK</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; <span id="year"></span> CloudOps Innovative Academy. All rights reserved.</div>
+                <div style="display: flex; gap: 1.5rem;">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
